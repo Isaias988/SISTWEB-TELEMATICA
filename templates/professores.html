@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <title>Professores</title>
+</head>
+<body>
+    <h1>Lista de Professores</h1>
+    <a href="/">Voltar</a>
+    <ul>
+        {% for professor in professores %}
+            <li>{{ professor.nome }} - {{ professor.email }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/professor/novo">Adicionar Professor</a>
+</body>
+</html>

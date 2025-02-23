@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <title>Nova Turma</title>
+</head>
+<body>
+    <h1>Adicionar Turma</h1>
+    <form method="POST">
+        Professor:
+        <select name="professor_id">
+            {% for professor in professores %}
+                <option value="{{ professor.id }}">{{ professor.nome }}</option>
+            {% endfor %}
+        </select><br>
+
+        Disciplina:
+        <select name="disciplina_id">
+            {% for disciplina in disciplinas %}
+                <option value="{{ disciplina.id }}">{{ disciplina.nome }}</option>
+            {% endfor %}
+        </select><br>
+
+        Código da Turma: <input type="text" name="codigo_turma" required><br>
+        Semestre: <input type="text" name="semestre" required><br>
+        Número de Alunos: <input type="number" name="numero_alunos" required><br>
+        Horário: <input type="text" name="horario" required><br>
+
+        <button type="submit">Salvar</button>
+    </form>
+    <a href="/turmas">Voltar</a>
+</body>
+</html>

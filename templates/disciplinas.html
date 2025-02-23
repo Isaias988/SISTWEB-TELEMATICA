@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <title>Disciplinas</title>
+</head>
+<body>
+    <h1>Lista de Disciplinas</h1>
+    <a href="/">Voltar</a>
+    <ul>
+        {% for disciplina in disciplinas %}
+            <li>{{ disciplina.codigo }} - {{ disciplina.nome }} ({{ disciplina.carga_horaria }} horas)</li>
+        {% endfor %}
+    </ul>
+    <a href="/disciplina/nova">Adicionar Disciplina</a>
+</body>
+</html>

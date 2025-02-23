@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <title>Turmas</title>
+</head>
+<body>
+    <h1>Lista de Turmas</h1>
+    <a href="/">Voltar</a>
+    <ul>
+        {% for turma in turmas %}
+            <li>Turma {{ turma.codigo_turma }} - Disciplina ID: {{ turma.disciplina_id }} - Professor ID: {{ turma.professor_id }} - {{ turma.semestre }} - {{ turma.numero_alunos }} alunos - {{ turma.horario }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/turma/nova">Adicionar Turma</a>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <title>Nova Aptidão</title>
+</head>
+<body>
+    <h1>Adicionar Aptidão</h1>
+    <form method="POST">
+        Professor:
+        <select name="professor_id">
+            {% for professor in professores %}
+                <option value="{{ professor.id }}">{{ professor.nome }}</option>
+            {% endfor %}
+        </select><br>
+
+        Disciplina:
+        <select name="disciplina_id">
+            {% for disciplina in disciplinas %}
+                <option value="{{ disciplina.id }}">{{ disciplina.nome }}</option>
+            {% endfor %}
+        </select><br>
+
+        <button type="submit">Salvar</button>
+    </form>
+    <a href="/aptidoes">Voltar</a>
+</body>
+</html>

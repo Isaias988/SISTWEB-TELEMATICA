@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <title>Aptidões</title>
+</head>
+<body>
+    <h1>Lista de Aptidões</h1>
+    <a href="/">Voltar</a>
+    <ul>
+        {% for aptidao in aptidoes %}
+            <li>Professor ID: {{ aptidao.professor_id }} - Disciplina ID: {{ aptidao.disciplina_id }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/aptidao/nova">Adicionar Aptidão</a>
+</body>
+</html>
